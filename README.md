@@ -7,3 +7,5 @@
 ```bash
   yarn && yarn dev
 ```
+
+**browse localhost:3000**
