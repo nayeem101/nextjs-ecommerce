@@ -6,6 +6,7 @@ import { Grid, Box, Container, makeStyles } from "@material-ui/core";
 import { fetcher } from "../utils/apiCalls";
 import ProductCard, { Product } from "../Components/Product/ProductCard";
 import Navfull from "../Components/Navbar/Navfull";
+import Hero from "../Components/Hero/Hero";
 
 const useStyles = makeStyles((theme) => ({
   offset: theme.mixins.toolbar,
@@ -17,6 +18,7 @@ export default function Index({ products }) {
   return (
     <>
       <Navfull />
+      <Hero />
       {/* <div className={styles.offset}></div>
       <Container maxWidth='lg'>
         <Box my={2}>
