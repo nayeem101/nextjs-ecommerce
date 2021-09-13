@@ -1,9 +1,8 @@
 import { GetStaticProps } from "next";
-import Link from "next/link";
 
 import { Grid, Box, Container, makeStyles } from "@material-ui/core";
 
-import { fetcher } from "../utils/apiCalls";
+import { getAllProducts } from "../utils/apiCalls";
 import ProductCard, { Product } from "../Components/Product/ProductCard";
 import Navfull from "../Components/Navbar/Navfull";
 import Hero from "../Components/Hero/Hero";
@@ -35,7 +34,7 @@ export default function Index({ products }) {
 
 //get static properties
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const data = await fetcher();
+  const data = await getAllProducts();
 
   return {
     props: {

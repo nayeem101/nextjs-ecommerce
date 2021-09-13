@@ -14,6 +14,8 @@ import {
 import { Favorite, AddShoppingCart } from "@material-ui/icons";
 
 import Image from "next/image";
+import Link from "next/link"
+
 import Cardactions from "./CardActions";
 
 const useStyles = makeStyles((theme) => {
@@ -67,33 +69,36 @@ export default function ProductCard({ product }: Props) {
   return (
     <Grid item>
       <Card className={classes.root}>
-        <CardActionArea>
-          <CardMedia className={classes.media} title={image.title}>
-            <Image
-              src={image.url}
-              alt={image.title}
-              width={270}
-              height={220}
-              placeholder='blur'
-            />
-          </CardMedia>
-          <CardContent>
-            <Typography variant='h6' component='h2' noWrap>
-              {product.name}
-            </Typography>
+        <Link href={`/products/${product.sys.id}`} >
+          <CardActionArea>
+            <CardMedia className={classes.media} title={image.title}>
+              <Image
+                src={image.url}
+                alt={image.title}
+                width={270}
+                height={220}
+                placeholder='blur'
+              />
+            </CardMedia>
 
-            <Typography variant='subtitle1' color='textPrimary' component='p'>
-              ৳{product.price}
-              <span className={classes.ogPrice}>
-                ৳{product.price + product.price * 0.2}
-              </span>
+            <CardContent>
+              <Typography variant='h6' component='h2' noWrap>
+                {product.name}
+              </Typography>
 
-            </Typography>
-            <Typography variant='body2' color='textSecondary' component='p'>
-              {product.description}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
+              <Typography variant='subtitle1' color='textPrimary' component='p'>
+                ৳{product.price}
+                <span className={classes.ogPrice}>
+                  ৳{product.price + product.price * 0.2}
+                </span>
+              </Typography>
+
+              <Typography variant='body2' color='textSecondary' component='p'>
+                {product.description}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Link>
         <Cardactions />
       </Card>
     </Grid>
