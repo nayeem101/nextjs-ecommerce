@@ -4,42 +4,39 @@ import { Grid, Box, Container, makeStyles } from "@material-ui/core";
 
 import { getAllProducts } from "../utils/apiCalls";
 import ProductCard, { Product } from "../Components/Product/ProductCard";
-import Navfull from "../Components/Navbar/Navfull";
-import Hero from "../Components/Hero/Hero";
 
-const useStyles = makeStyles((theme) => ({
-  offset: theme.mixins.toolbar,
-}));
+import Navfull from "../Components/Navbar";
+import Hero from "../Components/Hero";
 
 export default function Index({ products }) {
-  const styles = useStyles();
-
-  return (
-    <>
-      <Navfull />
-      <Hero />
-      {/* <div className={styles.offset}></div>
-      <Container maxWidth='lg'>
-        <Box my={2}>
-          <Grid container justify='center'>
-            {products.map((product: Product) => (
-              <ProductCard product={product} key={product.sys.id} />
-            ))}
-          </Grid>
-        </Box>
-      </Container> */}
-    </>
-  );
+   return (
+      <>
+         <Navfull />
+         <Hero />
+         {/* <Container maxWidth='lg'>
+                <Box my={2}>
+                    <Grid container justifyContent='center'>
+                        {products.map((product: Product) => (
+                            <ProductCard
+                                product={product}
+                                key={product.sys.id}
+                            />
+                        ))}
+                    </Grid>
+                </Box>
+            </Container> */}
+      </>
+   );
 }
 
 //get static properties
-export const getStaticProps: GetStaticProps = async (ctx) => {
-  const data = await getAllProducts();
+// export const getStaticProps: GetStaticProps = async (ctx) => {
+//     const data = await getAllProducts();
 
-  return {
-    props: {
-      products: data.productsCollection.items,
-    },
-    revalidate: 30,
-  };
-};
+//     return {
+//         props: {
+//             products: data.productsCollection.items,
+//         },
+//         revalidate: 30,
+//     };
+// };
