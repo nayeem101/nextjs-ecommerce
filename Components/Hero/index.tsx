@@ -1,29 +1,26 @@
-import { makeStyles } from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
 import Image from "next/image";
 
-const useHeroStyles = makeStyles((theme) => ({
-    slide: {
-        display: "flex",
-        justifyContent: "flex-end",
-    },
-    image: {
-        borderRadius: theme.spacing(1),
-    },
-}));
+import Categories from "./Categories";
+
+import useHeroStyles from "../../styles/heroStyles/useHeroStyles";
 
 const Hero = () => {
-    const classes = useHeroStyles();
-    return (
-        <div className={classes.slide}>
-            <Image
-                src='/assests/images/shop-image.jpeg'
-                alt='shop image'
-                height={500}
-                width={1000}
-                className={classes.image}
+   const classes = useHeroStyles();
+   return (
+      <Grid container className={classes.grid}>
+         <Grid item md={3}>
+            <Categories />
+         </Grid>
+         <Grid item md={9} className={classes.imageArea}>
+            <img
+               src="/assests/images/shop-image.jpeg"
+               alt="shop image"
+               className={classes.image}
             />
-        </div>
-    );
+         </Grid>
+      </Grid>
+   );
 };
 
 export default Hero;

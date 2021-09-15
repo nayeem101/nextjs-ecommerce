@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 16,
-    "prettier.printWidth": 80,
-    "prettier.tabWidth": 3
+   "editor.fontSize": 18,
+   "prettier.printWidth": 80,
+   "prettier.tabWidth": 3
 }
