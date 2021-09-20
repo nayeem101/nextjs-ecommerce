@@ -7,12 +7,14 @@ import ProductCard, { Product } from "../Components/Product/ProductCard";
 
 import Navfull from "../Components/Navbar";
 import Hero from "../Components/Hero";
+import Cart from "../Components/Cart";
 
 export default function Index({ products }) {
    return (
       <>
          <Navfull />
          <Hero />
+         <Cart />
          {/* <Container maxWidth='lg'>
                 <Box my={2}>
                     <Grid container justifyContent='center'>
