@@ -18,40 +18,50 @@ function Nav1() {
    const classes = useNav1Styles();
 
    return (
-      <Toolbar className={classes.nav1}>
-         <Typography color='primary' variant='h4' className={classes.logo}>
-            El Dorado
-         </Typography>
-
+      <Toolbar className={classes.nav1} disableGutters>
          <Box
-            display='flex'
-            justifyContent='flex-end'
-            alignItems='center'
-            flexGrow='1'
+            sx={{
+               maxWidth: "1360px",
+               width: "100%",
+               padding: "0 3rem",
+               display: "flex",
+               alignItems: "center",
+            }}
          >
-            <InputBase
-               className={classes.searchArea}
-               placeholder='search for products'
-               inputProps={{ "aria-label": "search for products" }}
-            />
-            <IconButton
-               type='submit'
-               className={classes.searchBtn}
-               aria-label='search'
+            <Typography color='primary' variant='h4' className={classes.logo}>
+               El Dorado
+            </Typography>
+
+            <Box
+               display='flex'
+               justifyContent='flex-end'
+               alignItems='center'
+               flexGrow='1'
             >
-               <SearchIcon />
-            </IconButton>
-         </Box>
-         <Box m={1}>
-            <IconButton aria-label='cart' className={classes.navIconBtn}>
-               <ShoppingCart fontSize='medium' />
-            </IconButton>
-            <IconButton aria-label='notifi' className={classes.navIconBtn}>
-               <Notifications fontSize='medium' />
-            </IconButton>
-            <IconButton aria-label='person' className={classes.navIconBtn}>
-               <Person fontSize='medium' />
-            </IconButton>
+               <InputBase
+                  className={classes.searchArea}
+                  placeholder='search for products'
+                  inputProps={{ "aria-label": "search for products" }}
+               />
+               <IconButton
+                  type='submit'
+                  className={classes.searchBtn}
+                  aria-label='search'
+               >
+                  <SearchIcon />
+               </IconButton>
+            </Box>
+            <Box m={1}>
+               <IconButton aria-label='cart' className={classes.navIconBtn}>
+                  <ShoppingCart fontSize='medium' color='primary' />
+               </IconButton>
+               <IconButton aria-label='notifi' className={classes.navIconBtn}>
+                  <Notifications fontSize='medium' color='primary' />
+               </IconButton>
+               <IconButton aria-label='person' className={classes.navIconBtn}>
+                  <Person fontSize='medium' color='primary' />
+               </IconButton>
+            </Box>
          </Box>
       </Toolbar>
    );

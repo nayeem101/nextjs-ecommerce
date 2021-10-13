@@ -3,24 +3,22 @@ import { makeStyles } from "@material-ui/core";
 const useNav2Styles = makeStyles((theme) => ({
    nav2: {
       backgroundColor: theme.palette.primary.main,
-      display: "flex",
-      alignItems: "center",
-      padding: theme.spacing(0, 3),
+      minHeight: "60px",
    },
 
    categoriesMenu: {
       color: "#fff",
-      height: "100%",
-      width: theme.spacing(27),
+      width: "250px",
       fontWeight: 500,
       transition: "all .5s",
-      position: "relative",
       display: "flex",
       alignItems: "center",
+      justifyContent: "space-between",
+      padding: theme.spacing(1),
       borderRadius: 0,
-
+      backgroundColor: theme.palette.primary.light,
       "&:hover": {
-         backgroundColor: theme.palette.primary.light,
+         backgroundColor: theme.palette.secondary.main,
       },
    },
 
@@ -31,12 +29,11 @@ const useNav2Styles = makeStyles((theme) => ({
 
    navMenu: {
       flexGrow: 1,
-
       display: "flex",
       justifyContent: "flex-end",
    },
    navMenuItem: {
-      margin: theme.spacing(0, 2),
+      margin: theme.spacing(0, 1),
       width: "auto",
       transition: "all .5s",
       borderRadius: ".5rem",

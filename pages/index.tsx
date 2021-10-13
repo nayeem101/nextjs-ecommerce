@@ -13,10 +13,12 @@ export default function Index({ products }) {
    return (
       <>
          <Navfull />
-         <Hero />
-         <Cart />
+
          {/* <Container maxWidth='lg'>
                 <Box my={2}>
+         <Container maxWidth='xl' disableGutters>
+            <Hero />
+            {/* <Box my={2}>
                     <Grid container justifyContent='center'>
                         {products.map((product: Product) => (
                             <ProductCard
@@ -25,8 +27,8 @@ export default function Index({ products }) {
                             />
                         ))}
                     </Grid>
-                </Box>
-            </Container> */}
+                </Box> */}
+         </Container>
       </>
    );
 }
