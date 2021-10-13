@@ -7,11 +7,15 @@ import ProductCard, { Product } from "../Components/Product/ProductCard";
 
 import Navfull from "../Components/Navbar";
 import Hero from "../Components/Hero";
+import Cart from "../Components/Cart";
 
 export default function Index({ products }) {
    return (
       <>
          <Navfull />
+
+         {/* <Container maxWidth='lg'>
+                <Box my={2}>
          <Container maxWidth='xl' disableGutters>
             <Hero />
             {/* <Box my={2}>
