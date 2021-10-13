@@ -45,32 +45,45 @@ const Nav2 = () => {
    const classes = useNav2Styles();
 
    return (
-      <Toolbar className={classes.nav2}>
-         <IconButton
-            color="inherit"
-            aria-label="cat-menu"
-            className={classes.categoriesMenu}
+      <Toolbar className={classes.nav2} disableGutters>
+         <Box
+            sx={{
+               maxWidth: "1360px",
+               width: "100%",
+               padding: "0 3rem",
+               display: "flex",
+            }}
          >
-            <MenuIcon fontSize="medium" />
-            <Typography
-               variant="h5"
-               component="span"
-               className={classes.categoriesMenuText}
+            <IconButton
+               color='inherit'
+               aria-label='cat-menu'
+               className={classes.categoriesMenu}
             >
-               Categories
-            </Typography>
-            <ExpandMore fontSize="medium" />
-         </IconButton>
+               <MenuIcon fontSize='medium' />
+               <Typography
+                  variant='h5'
+                  component='span'
+                  className={classes.categoriesMenuText}
+               >
+                  Categories
+               </Typography>
+               <ExpandMore fontSize='medium' />
+            </IconButton>
 
-         <List className={classes.navMenu}>
-            {navList.map((item, index) => (
-               <Link href={item.url}>
-                  <ListItem button className={classes.navMenuItem} key={index}>
-                     <a className={classes.navMenuItemLink}>{item.title}</a>
-                  </ListItem>
-               </Link>
-            ))}
-         </List>
+            <List className={classes.navMenu}>
+               {navList.map((item, index) => (
+                  <Link href={item.url} key={index}>
+                     <ListItem
+                        button
+                        className={classes.navMenuItem}
+                        key={index}
+                     >
+                        <a className={classes.navMenuItemLink}>{item.title}</a>
+                     </ListItem>
+                  </Link>
+               ))}
+            </List>
+         </Box>
       </Toolbar>
    );
 };

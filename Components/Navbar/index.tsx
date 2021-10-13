@@ -8,7 +8,7 @@ const useNavfullStyles = makeStyles((theme) => ({
    navTop: {
       margin: 0,
       backgroundColor: theme.palette.secondary.light,
-      padding: theme.spacing(0, 3),
+      padding: theme.spacing(0, 4),
       height: "40px",
       fontSize: ".9rem",
       letterSpacing: "1px",
@@ -30,7 +30,7 @@ function Navfull() {
                Shop no. 6, 5th floor, Ananda City Center, Kandirpar, Cumilla
             </Typography>
          </nav>
-         {/* <div className={classes.offset}></div> */}
+
          <AppBar position='sticky'>
             <Nav1 />
             <Nav2 />
