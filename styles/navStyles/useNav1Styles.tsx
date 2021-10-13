@@ -3,9 +3,6 @@ import { makeStyles } from "@material-ui/core";
 const useNav1Styles = makeStyles((theme) => ({
    nav1: {
       backgroundColor: "#fff",
-      display: "flex",
-      alignItems: "center",
-      padding: theme.spacing(0, 3),
    },
 
    logo: {
@@ -31,13 +28,15 @@ const useNav1Styles = makeStyles((theme) => ({
       padding: theme.spacing(1, 2),
       height: "45px",
       borderRadius: "0 .5rem .5rem 0",
+      transition: ".3s ease",
       "&:hover": {
          backgroundColor: "#607d8b",
       },
    },
    navIconBtn: {
       backgroundColor: "#e0f2f1",
-      marginLeft: theme.spacing(1),
+      marginLeft: theme.spacing(2),
+      transition: ".3s ease",
    },
 }));
 
