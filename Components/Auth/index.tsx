@@ -21,7 +21,7 @@ const AuthForm = ({ elements }) => {
    console.log(elements[0]);
 
    const formik = useFormik({
-      initialValues: { email: "", password: "" },
+      initialValues: elements,
       validationSchema: LoginSchema,
       onSubmit: () => console.log("form submited"),
    });
