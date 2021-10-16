@@ -17,11 +17,9 @@ const LoginSchema = Yup.object({
       .required("password is required"),
 });
 
-const AuthForm = ({ elements }) => {
-   console.log(elements[0]);
-
+const LoginAuth = () => {
    const formik = useFormik({
-      initialValues: elements,
+      initialValues: { email: "", password: "" },
       validationSchema: LoginSchema,
       onSubmit: () => console.log("form submited"),
    });
@@ -40,8 +38,8 @@ const AuthForm = ({ elements }) => {
                label="Email Address"
                name="email"
                type="email"
-               value={formik.values.email}
                onChange={formik.handleChange}
+               value={formik.values.email}
                error={formik.touched.email || formik.errors.email}
                helperText={formik.touched.email && formik.errors.email}
             />
@@ -49,8 +47,8 @@ const AuthForm = ({ elements }) => {
                label="Password"
                name="password"
                type="password"
-               value={formik.values.password}
                onChange={formik.handleChange}
+               value={formik.values.password}
                error={formik.touched.password || formik.errors.password}
                helperText={formik.touched.password && formik.errors.password}
             />
@@ -74,4 +72,4 @@ const AuthForm = ({ elements }) => {
    );
 };
 
-export default AuthForm;
+export default LoginAuth;

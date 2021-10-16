@@ -1,16 +1,14 @@
 import React from "react";
 import Navfull from "../../Components/Navbar";
 
-import Auth from "../../Components/Auth";
-
-const loginEl = { email: "", password: "" }
+import LoginAuth from "../../Components/Auth/Login";
 
 const login = () => {
    return (
       <>
          <Navfull />
 
-         <Auth elements={loginEl} />
+         <LoginAuth />
       </>
    );
 };
