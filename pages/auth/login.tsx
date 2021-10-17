@@ -1,7 +1,7 @@
 import React from "react";
-import Navfull from "../../Components/Navbar";
+import Navfull from "../../components/Navbar";
 
-import LoginAuth from "../../Components/Auth/Login";
+import LoginAuth from "../../components/Auth/Login";
 
 const login = () => {
    return (
